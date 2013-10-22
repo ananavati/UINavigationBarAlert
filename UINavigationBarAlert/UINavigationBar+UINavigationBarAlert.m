@@ -13,12 +13,24 @@
 
 # pragma mark Init methods
 
--(UINavigationBarAlert *)createAlertView
+-(UINavigationBarAlert *)createAlertViewWithTitle:(NSString *)title
 {
+    // Create the alert
     UINavigationBarAlert *alert = [UINavigationBarAlert new];
     
-    CGRect frame = CGRectMake(0, 66, 320, 50);
+    // Get navigationBar frame, and use it to set the alert view frame
+    CGRect frame = self.frame;
+    
+    // New height
+    frame.size.height = 44;
+    
+    // Set the top position to the navBars top positon plus its height
+    frame.origin.y = (frame.origin.y - frame.size.height / 2) + frame.size.height;
+    
+    // Assign the new frame to the alert
     alert.frame = frame;
+    
+    // Default style
     alert.backgroundColor = [UIColor lightGrayColor];
 
     return alert;
@@ -28,7 +40,7 @@
 
 -(void)showAlertWithTitle:(NSString *)title
 {
-    UINavigationBarAlert *alert = [self createAlertView];
+    UINavigationBarAlert *alert = [self createAlertViewWithTitle:title];
     [self addSubview:alert];
 }
 
