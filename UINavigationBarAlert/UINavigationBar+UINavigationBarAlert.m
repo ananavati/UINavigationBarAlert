@@ -64,7 +64,8 @@
 
 -(void)showAlertWithTitle:(NSString *)title hideAfter:(float)timer
 {
-    
+    [self showAlertWithTitle:title];
+    [self performSelector:@selector(hideAlert) withObject:nil afterDelay:timer / 1000];
 }
 
 #pragma mark Hide alert methods
