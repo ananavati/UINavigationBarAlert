@@ -37,7 +37,7 @@
 }
 
 - (IBAction)showAlertWithTimerButtonPressed:(id)sender {
-    [self.navigationController.navigationBar showAlertWithTitle:@"Alert with timer" hideAfter:1500];
+    [self.navigationController.navigationBar showAlertWithTitle:@"Alert with timer" hideAfter:1.5];
     NSLog(@"Show alert with timer");
 }
 

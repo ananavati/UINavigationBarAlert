@@ -16,8 +16,8 @@
 // Hides the alert
 -(void)hideAlert;
 
-// Shows an alert with a title that hides in xx milliseconds
--(void)showAlertWithTitle:(NSString *)title hideAfter:(float)timer;
+// Shows an alert with a title that hides in xx
+-(void)showAlertWithTitle:(NSString *)title hideAfter:(NSTimeInterval)timer;
 
 
 @end
