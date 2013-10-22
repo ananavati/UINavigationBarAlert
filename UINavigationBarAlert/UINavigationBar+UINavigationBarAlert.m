@@ -41,6 +41,22 @@
 -(void)showAlertWithTitle:(NSString *)title
 {
     UINavigationBarAlert *alert = [self createAlertViewWithTitle:title];
+    
+    // Get alert height
+    float height = alert.frame.size.height;
+    
+    // Set height to 0 on alert so we can animate it back to the original
+    CGRect frame = alert.frame;
+    frame.size.height = 0;
+    alert.frame = frame;
+    
+    // Animate back to original height.
+    [UIView animateWithDuration:0.2 animations:^{
+        CGRect frame = alert.frame;
+        frame.size.height = height;
+        alert.frame = frame;
+    }];
+    
     [self addSubview:alert];
 }
 
