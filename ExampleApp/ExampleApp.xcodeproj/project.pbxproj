@@ -23,6 +23,7 @@
 		DC7B80AB18171C4F009F20FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC7B80A918171C4F009F20FB /* InfoPlist.strings */; };
 		DC7B80AD18171C4F009F20FB /* ExampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7B80AC18171C4F009F20FB /* ExampleAppTests.m */; };
 		DC7B80B918171C7F009F20FB /* UINavigationBarAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7B80B818171C7F009F20FB /* UINavigationBarAlert.m */; };
+		DC7B80BC18172ECE009F20FB /* UINavigationBar+UINavigationBarAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7B80BB18172ECE009F20FB /* UINavigationBar+UINavigationBarAlert.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		DC7B80AC18171C4F009F20FB /* ExampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleAppTests.m; sourceTree = "<group>"; };
 		DC7B80B718171C7F009F20FB /* UINavigationBarAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavigationBarAlert.h; sourceTree = "<group>"; };
 		DC7B80B818171C7F009F20FB /* UINavigationBarAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavigationBarAlert.m; sourceTree = "<group>"; };
+		DC7B80BA18172ECE009F20FB /* UINavigationBar+UINavigationBarAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+UINavigationBarAlert.h"; sourceTree = "<group>"; };
+		DC7B80BB18172ECE009F20FB /* UINavigationBar+UINavigationBarAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+UINavigationBarAlert.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 			children = (
 				DC7B80B718171C7F009F20FB /* UINavigationBarAlert.h */,
 				DC7B80B818171C7F009F20FB /* UINavigationBarAlert.m */,
+				DC7B80BA18172ECE009F20FB /* UINavigationBar+UINavigationBarAlert.h */,
+				DC7B80BB18172ECE009F20FB /* UINavigationBar+UINavigationBarAlert.m */,
 			);
 			name = UINavigationBarAlert;
 			path = ../../UINavigationBarAlert;
@@ -271,6 +276,7 @@
 				DC7B809818171C4F009F20FB /* ViewController.m in Sources */,
 				DC7B808F18171C4F009F20FB /* AppDelegate.m in Sources */,
 				DC7B808B18171C4F009F20FB /* main.m in Sources */,
+				DC7B80BC18172ECE009F20FB /* UINavigationBar+UINavigationBarAlert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

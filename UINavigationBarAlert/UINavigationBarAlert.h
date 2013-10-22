@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UINavigationBar+UINavigationBarAlert.h"
 
 @interface UINavigationBarAlert : UIView
 

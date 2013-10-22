@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UINavigationBarAlert.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *showAlertButton;
@@ -26,6 +27,7 @@
 #pragma mark Buttons
 
 - (IBAction)showAlertButtonPressed:(id)sender {
+    [self.navigationController.navigationBar showAlertWithTitle:@"Alert with title."];
     NSLog(@"Show alert");
 }
 
