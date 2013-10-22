@@ -9,6 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *showAlertButton;
+@property (weak, nonatomic) IBOutlet UIButton *hideAlertButton;
+@property (weak, nonatomic) IBOutlet UIButton *showAlertWithTimerButton;
 
 @end
 
@@ -18,6 +21,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+#pragma mark Buttons
+
+- (IBAction)showAlertButtonPressed:(id)sender {
+    NSLog(@"Show alert");
+}
+
+- (IBAction)hideAlertButtonPressed:(id)sender {
+    NSLog(@"Hide alert");
+}
+
+- (IBAction)showAlertWithTimerButtonPressed:(id)sender {
+    NSLog(@"Show alert with timer");
 }
 
 - (void)didReceiveMemoryWarning
