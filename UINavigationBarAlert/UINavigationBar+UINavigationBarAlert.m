@@ -50,6 +50,9 @@
     frame.size.height = 0;
     alert.frame = frame;
     
+    // Add it to navbar
+    [self addSubview:alert];
+    
     // Animate back to original height.
     [UIView animateWithDuration:0.2 animations:^{
         CGRect frame = alert.frame;
@@ -57,7 +60,6 @@
         alert.frame = frame;
     }];
     
-    [self addSubview:alert];
 }
 
 -(void)showAlertWithTitle:(NSString *)title hideAfter:(float)timer
@@ -69,7 +71,26 @@
 
 -(void)hideAlert
 {
-    
+    // Get all alert views so we can hide them
+    for (id subview in self.subviews)
+    {
+        if ([subview isKindOfClass:[UINavigationBarAlert class]])
+        {
+            // Get the alert
+            UINavigationBarAlert *alert = subview;
+            
+            // Animate the alert and then remove it from navBar
+            [UIView animateWithDuration:0.2 animations:^{
+                CGRect frame = alert.frame;
+                frame.size.height = 0;
+                alert.frame = frame;
+            } completion:^(BOOL finished) {
+                // Remove when animation is completed
+                [alert removeFromSuperview];
+            }];
+        }
+    }
+            
 }
 
 

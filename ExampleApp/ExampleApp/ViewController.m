@@ -32,10 +32,12 @@
 }
 
 - (IBAction)hideAlertButtonPressed:(id)sender {
+    [self.navigationController.navigationBar hideAlert];
     NSLog(@"Hide alert");
 }
 
 - (IBAction)showAlertWithTimerButtonPressed:(id)sender {
+    [self.navigationController.navigationBar showAlertWithTitle:@"Alert with timer" hideAfter:1500];
     NSLog(@"Show alert with timer");
 }
 
