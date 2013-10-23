@@ -24,8 +24,8 @@
     // New height
     frame.size.height = 44;
     
-    // Set the top position to the navBars top positon plus its height
-    frame.origin.y = (frame.origin.y - frame.size.height / 2) + frame.size.height + 1;
+    // Set the top position to the navBars height
+    frame.origin.y = self.frame.size.height;
     
     // Assign the new frame to the alert
     alert.frame = frame;
