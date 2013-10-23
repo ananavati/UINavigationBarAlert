@@ -16,6 +16,8 @@ The category adds three new methods to `UINavigationBar`, which can be found as 
 	
 ## Examples
 
+![image](https://dl.dropboxusercontent.com/u/958499/UINavigationBarAlert.gif)
+
 	[self.navigationController.navigationBar showAlertWithTitle:@"Alert with title."];
 	[self.navigationController.navigationBar showAlertWithTitle:@"Alert with timer" hideAfter:1.5];
 	[self.navigationController.navigationBar hideAlert];
