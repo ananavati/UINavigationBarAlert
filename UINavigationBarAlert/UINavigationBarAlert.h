@@ -11,4 +11,12 @@
 
 @interface UINavigationBarAlert : UIView
 
+// Color of the title
+@property (nonatomic, retain) UIColor *titleColor;
+
+// The alert text
+@property (nonatomic, retain) NSString *titleText;
+
+// Initializer
+-(id)initWithTitle:(NSString *)title andTitleColor:(UIColor *)color;
 @end

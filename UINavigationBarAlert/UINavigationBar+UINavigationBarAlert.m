@@ -16,7 +16,7 @@
 -(UINavigationBarAlert *)createAlertViewWithTitle:(NSString *)title
 {
     // Create the alert
-    UINavigationBarAlert *alert = [UINavigationBarAlert new];
+    UINavigationBarAlert *alert = [[UINavigationBarAlert alloc] initWithTitle:title andTitleColor:[UIColor darkTextColor]];
     
     // Get navigationBar frame, and use it to set the alert view frame
     CGRect frame = self.frame;

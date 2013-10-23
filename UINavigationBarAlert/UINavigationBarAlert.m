@@ -10,22 +10,26 @@
 
 @implementation UINavigationBarAlert
 
-- (id)initWithFrame:(CGRect)frame
+@synthesize titleColor, titleText;
+
+-(id)initWithTitle:(NSString *)title andTitleColor:(UIColor *)color
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
-        // Initialization code
+        
+        // Set title and color
+        self.titleText = title;
+        self.titleColor = color;
+        
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
+
 - (void)drawRect:(CGRect)rect
 {
-    // Drawing code
+    // Set color and font
+    
 }
-*/
 
 @end
