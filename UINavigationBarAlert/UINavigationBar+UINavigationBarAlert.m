@@ -16,7 +16,7 @@
 -(UINavigationBarAlert *)createAlertViewWithTitle:(NSString *)title
 {
     // Create the alert
-    UINavigationBarAlert *alert = [[UINavigationBarAlert alloc] initWithTitle:title andTitleColor:[UIColor darkTextColor]];
+    UINavigationBarAlert *alert = [[UINavigationBarAlert alloc] initWithTitle:title andTitleColor:[UIColor whiteColor]];
     
     // Get navigationBar frame, and use it to set the alert view frame
     CGRect frame = self.frame;
@@ -25,10 +25,13 @@
     frame.size.height = 44;
     
     // Set the top position to the navBars top positon plus its height
-    frame.origin.y = (frame.origin.y - frame.size.height / 2) + frame.size.height;
+    frame.origin.y = (frame.origin.y - frame.size.height / 2) + frame.size.height + 1;
     
     // Assign the new frame to the alert
     alert.frame = frame;
+    
+    // Hide everything outside the alert
+    alert.clipsToBounds = YES;
     
     // Default style
     alert.backgroundColor = [UIColor lightGrayColor];

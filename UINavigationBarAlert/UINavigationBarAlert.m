@@ -21,15 +21,50 @@
         self.titleText = title;
         self.titleColor = color;
         
+        // Lower alpha to make it transparant
+        self.alpha = 0.8;
+        
+        // Set autoresizing
+        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+        
     }
     return self;
 }
 
+-(UILabel *)createLabelWithText:(NSString *)text
+{
+    // Create a frame for the label
+    CGRect frame = self.frame;
+    frame.size.width -= 20;
+    frame.size.height -= 10;
+    frame.origin.x = 10;
+    frame.origin.y = 5;
+    
+    // Create new label with the frame
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    
+    // Add text to the label
+    label.text = text;
+    
+    // Style the label
+    label.minimumScaleFactor = 0.5;
+    label.font = [UIFont boldSystemFontOfSize:14];
+    label.textColor = self.titleColor;
+    label.textAlignment = NSTextAlignmentCenter;
+    
+    // Set autoresizing
+    label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+    
+    return label;
+}
 
 - (void)drawRect:(CGRect)rect
 {
-    // Set color and font
+    // Create label
+    UILabel *label = [self createLabelWithText:self.titleText];
     
+    // Add the label to the alert
+    [self addSubview:label];
 }
 
 @end
